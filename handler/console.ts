@@ -1,6 +1,9 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 
 class Console {
+  log(arg: string) {
+    console.log(arg);
+  }
   success(arg: string) {
     console.log(chalk.green(`[+]`), arg);
   }
@@ -14,3 +17,5 @@ class Console {
     console.log(chalk.yellow(`[!]`), arg);
   }
 }
+
+module.exports = new Console();
