@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 
 app.use("/js", require("./routes/js"));
+app.use("/api", require("./routes/api"));
 app.use("/css", require("./routes/css"));
 
 app.get("/", function (req, res) {
